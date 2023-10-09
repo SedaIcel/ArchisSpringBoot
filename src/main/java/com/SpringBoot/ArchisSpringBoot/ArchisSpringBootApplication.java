@@ -7,7 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ArchisSpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ArchisSpringBootApplication.class, args);
+		try {
+			SpringApplication.run(ArchisSpringBootApplication.class, args);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 	}
 
 }
